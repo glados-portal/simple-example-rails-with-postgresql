@@ -1,4 +1,4 @@
-FROM ruby:2.6.6
+FROM ruby:2.7.2
 
 # Install yarn and postgresql client
 ADD https://dl.yarnpkg.com/debian/pubkey.gpg /tmp/yarn-pubkey.gpg
@@ -16,7 +16,7 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 COPY package.json /app/package.json
 
-RUN gem install bundler:2.1.4
+RUN gem install bundler:2.2.17
 RUN bundle install
 
 COPY . /app
@@ -27,4 +27,4 @@ RUN yarn
 # Expose and run server on port 3000
 EXPOSE 3000
 
-CMD ["rails", "server", "-b", "0.0.0.0"] 
+CMD ["rails", "server", "-b", "0.0.0.0"]
