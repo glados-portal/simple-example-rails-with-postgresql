@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.hosts << '.qovery.io'
+  config.hosts << 'z780a66ad-zeb1e41ca-gtw.slab.sh'
   
   # Code is not reloaded between requests.
   config.cache_classes = true
